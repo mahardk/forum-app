@@ -22,7 +22,7 @@ describe('threadsSlice reducer', () => {
   describe('setCategoryFilter', () => {
     it('should set categoryFilter to given value', () => {
       const nextState = threadsReducer(initialState, setCategoryFilter('react'));
-      expect(nextState.categoryFilter).toBe('errortest');
+      expect(nextState.categoryFilter).toBe('react');
     });
 
     it("should reset categoryFilter to 'all'", () => {
