@@ -1,0 +1,21 @@
+module.exports = {
+  env: { browser: true, es2021: true },
+  extends: ['airbnb', 'airbnb/hooks'],
+  parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
+  settings: { react: { version: 'detect' } },
+  rules: {
+    'react/react-in-jsx-scope': 'off',
+    'import/extensions': ['error', 'ignorePackages', { js: 'never', jsx: 'never' }],
+
+    'react/jsx-filename-extension': [1, { extensions: ['.jsx'] }],
+
+    'no-console': 'warn',
+    'linebreak-style': 'off',
+    'eol-last': 'off',
+    'import/prefer-default-export': 'off',
+
+    'import/no-extraneous-dependencies': ['error', {
+      devDependencies: ['**/vite.config.*', '**/*.test.*', '**/*.spec.*'],
+    }],
+  },
+};

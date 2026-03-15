@@ -1,0 +1,311 @@
+:root {
+  font-family: system-ui, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f6f7fb;
+  color: #111;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+.pageTitle {
+  margin: 0 0 12px;
+  font-size: 28px;
+}
+
+.nav {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  background: #243447;
+  color: #fff;
+  padding: 18px 16px;
+  min-height: 72px;
+  position: sticky;
+  top: 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+}
+
+.brandLogo {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  object-fit: cover;
+  background: #fff;
+}
+
+.brandText {
+  letter-spacing: 0.2px;
+}
+
+.navLinks a,
+.authLinks a {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.9;
+  margin-right: 12px;
+}
+
+.navLinks a.active,
+.authLinks a.active {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.userBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  object-fit: cover;
+  background: #ddd;
+}
+
+.userName {
+  max-width: 140px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tag {
+  display: inline-block;
+  background: #eef2ff;
+  color: #334155;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.threadTitle {
+  margin: 8px 0 6px;
+}
+
+.threadTitle a {
+  text-decoration: none;
+}
+
+.threadHeader {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.threadHeaderAvatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 999px;
+  object-fit: cover;
+  background: #ddd;
+}
+
+.threadHeaderInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.threadHeaderName {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.muted {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.cardBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.btn,
+.btnPrimary {
+  border: 0;
+  border-radius: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.btn {
+  background: #334155;
+  color: #fff;
+}
+
+.btnPrimary {
+  background: #2563eb;
+  color: #fff;
+}
+
+.btnLink {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 14px;
+}
+
+.chip {
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.chipActive {
+  background: #111827;
+  border-color: #111827;
+  color: #fff;
+}
+
+.votes {
+  display: flex;
+  gap: 8px;
+}
+
+.voteBtn {
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  padding: 6px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.voteActive {
+  border-color: #111827;
+}
+
+.formCard {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input,
+textarea {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+}
+
+.comment {
+  border-top: 1px solid #eef2f7;
+  padding-top: 12px;
+}
+
+.commentHead {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.htmlContent {
+  line-height: 1.65;
+}
+
+.loadingOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 4px solid #fff;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+.loadingText {
+  color: #fff;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.leaderRow {
+  display: grid;
+  grid-template-columns: 40px 40px 1fr 80px;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.leaderRank {
+  font-weight: 700;
+  color: #64748b;
+}
+
+.leaderScore {
+  text-align: right;
+  font-weight: 700;
+}
+
+.commentFooter {
+  margin-top: 10px;
+}
