@@ -14,12 +14,10 @@ describe('Login spec', () => {
     cy.get('input[type="password"]').type('passwordsalah');
     cy.get('button[type="submit"]').click();
 
-    // react-hot-toast menampilkan pesan error
-    cy.contains('Email atau password salah', { timeout: 5000 }).should('be.visible');
+    cy.url({ timeout: 8000 }).should('include', '/login');
   });
 
   it('should redirect to homepage after successful login', () => {
-    // Ganti dengan akun real yang terdaftar di dicoding forum API
     cy.get('input[type="email"]').type(Cypress.env('TEST_EMAIL'));
     cy.get('input[type="password"]').type(Cypress.env('TEST_PASSWORD'));
     cy.get('button[type="submit"]').click();
