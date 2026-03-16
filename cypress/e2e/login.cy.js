@@ -18,8 +18,8 @@ describe('Login spec', () => {
   });
 
   it('should redirect to homepage after successful login', () => {
-    cy.get('input[type="email"]').type(Cypress.env('TEST_EMAIL'));
-    cy.get('input[type="password"]').type(Cypress.env('TEST_PASSWORD'));
+    cy.get('input[type="email"]').type('rinzeroslash.02@gmail.com');
+    cy.get('input[type="password"]').type('12345678');
     cy.get('button[type="submit"]').click();
 
     cy.url({ timeout: 5000 }).should('eq', 'http://localhost:5173/');
